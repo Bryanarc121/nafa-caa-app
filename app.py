@@ -128,16 +128,16 @@ def count_completed() -> int:
 def get_result(total: int):
     if total >= MINIMUM_QUALIFYING_SCORE:
         return {
-            "title": "You Are Ready!",
+            "title": "Ready!",
             "message": "You meet the minimum point threshold. Talk to your air filtration supplier about a NAFA Clean Air Award submission for your facility.",
             "bg": "#78B54B",
             "border": "#5E9339",
             "text": "#111111",
         }
 
-    if total >= 40:
+    if total >= 45:
         return {
-            "title": "Partially Ready!",
+            "title": "Nearly Ready!",
             "message": "You are below the minimum 62-point threshold. Review the unmet criteria and talk to your air filtration supplier about improvement options.",
             "bg": "#F6C103",
             "border": "#D9A701",
@@ -145,7 +145,7 @@ def get_result(total: int):
         }
 
     return {
-        "title": "You Are Not Ready!",
+        "title": "Not Ready!",
         "message": "You are below the minimum 62-point threshold. Additional work is required before pursuing a Clean Air Award submission.",
         "bg": "#F31A12",
         "border": "#D9A701",
